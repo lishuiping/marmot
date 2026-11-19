@@ -319,9 +319,29 @@ npm start
 
 开发前请确保 `npm run build` 零错误通过。项目使用 `tsc --noEmit` 做类型检查，类型定义缺失会导致构建失败。
 
+### 代码风格
+
+每个源文件开头都带一段说明该文件职责的头部注释，并标注作者与许可证：
+
+```ts
+/**
+ * 主界面：编辑器状态、文件树与大纲侧栏、查找替换、偏好设置、关于面板等全部交互。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
+```
+
+`.mjs` 脚本用等价的 `//` 注释形式。新增文件请沿用这一格式，并把自己填进 `@author`。
+
 ---
 
 ## 致谢
+
+**作者**：[lishuiping](https://github.com/lishuiping)
+
+依赖与工具：
 
 - [Electron](https://electronjs.org/) — 跨平台桌面框架
 - [React](https://react.dev/) — 界面库
