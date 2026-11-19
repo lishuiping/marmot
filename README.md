@@ -19,11 +19,33 @@
   <a href="#为什么开源">为什么开源</a> ·
   <a href="#界面一览">界面一览</a> ·
   <a href="#功能特性">功能特性</a> ·
-  <a href="#快速开始">快速开始</a> ·
+  <a href="#下载">下载</a> ·
+  <a href="#快速开始">从源码运行</a> ·
   <a href="#目录结构">目录结构</a> ·
   <a href="#技术栈">技术栈</a> ·
   <a href="#路线图">路线图</a>
 </p>
+
+---
+
+## 下载
+
+预编译的安装包在 [Releases](https://github.com/lishuiping/marmot/releases) 页面，按平台选择：
+
+| 平台 | 产物 | 说明 |
+|---|---|---|
+| macOS (Apple Silicon) | `Marmot-<version>-arm64.dmg` | 双击安装 |
+| macOS (Intel) | `Marmot-<version>-x64.dmg` | 双击安装 |
+| Windows | `Marmot Setup <version>.exe` | 安装向导，可选安装目录 |
+| Windows | `Marmot-<version>-win32-x64.zip` | 免安装绿色版，解压即用 |
+| Linux | `Marmot-<version>.AppImage` | 任意发行版，`chmod +x` 后运行 |
+| Linux | `Marmot_<version>_amd64.deb` | Debian / Ubuntu 用 `sudo dpkg -i` 安装 |
+
+> **macOS 提示**：安装包未做代码签名（没有开发者证书），首次打开会提示"无法验证开发者"。
+> 解决办法：右键点击 → 选择「打开」→ 再次点击「打开」，或在终端执行
+> `xattr -cr /Applications/Marmot.app`。
+
+想自己编译？见下方[快速开始](#快速开始)。
 
 ---
 
