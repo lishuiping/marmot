@@ -42,3 +42,7 @@ build-activity.log
 
 # Craft Anything usage record
 usage.json
+
+# One-shot publish helper (local use only)
+push-to-github.sh
+app/release/
