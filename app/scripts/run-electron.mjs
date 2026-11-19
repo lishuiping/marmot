@@ -1,6 +1,12 @@
-// Launches the locally installed Electron with a clean environment.
-// Some agent shells export ELECTRON_RUN_AS_NODE=1, which turns Electron into
-// plain Node; drop it so the window can actually open.
+//
+// 以干净环境启动本地安装的 Electron。
+//
+// 某些终端会导出 ELECTRON_RUN_AS_NODE=1，会让 Electron 退化成纯 Node，这里要清掉。
+//
+// @author lishuiping
+// @license Apache-2.0
+// @see https://github.com/lishuiping/marmot
+
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';

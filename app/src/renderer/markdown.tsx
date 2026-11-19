@@ -1,3 +1,10 @@
+/**
+ * Markdown 解析与渲染：块级解析、分类、实时渲染、代码高亮与数学公式。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
 import React, { useEffect, useLayoutEffect, useMemo, useRef } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import katex from 'katex';

@@ -1,11 +1,15 @@
-// Captures the screens used in the README.
 //
-// Each screen is driven through the same code path the interface itself uses,
-// so the pictures show the real thing rather than a mock-up.
+// 生成 README 使用的界面截图。
 //
-//   node scripts/capture-screens.mjs
+// 每个画面都走界面自身的代码路径，因此截图反映的是真实运行状态。
 //
-// Output lands in ../docs/images/.
+// @author lishuiping
+// @license Apache-2.0
+// @see https://github.com/lishuiping/marmot
+//
+// 用法：node scripts/capture-screens.mjs
+// 产物：docs/images/screen-*.jpg
+
 import { app, BrowserWindow } from 'electron';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';

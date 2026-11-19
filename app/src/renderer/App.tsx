@@ -1,3 +1,10 @@
+/**
+ * 主界面：编辑器状态、文件树与大纲侧栏、查找替换、偏好设置、关于面板等全部交互。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { FileNode } from '../shared/types';
 import {

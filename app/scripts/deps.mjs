@@ -1,6 +1,10 @@
-// Installs the project's dependencies on the first build.
-// Craft Anything runs `npm run build`; this prebuild step makes a fresh
-// checkout self-contained without needing a separate install command.
+//
+// 首次构建时自动安装缺失的依赖，让全新克隆无需额外命令即可构建。
+//
+// @author lishuiping
+// @license Apache-2.0
+// @see https://github.com/lishuiping/marmot
+
 import { existsSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { dirname, join } from 'node:path';

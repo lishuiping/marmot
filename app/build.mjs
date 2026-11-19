@@ -1,5 +1,12 @@
-// Bundles the Electron main process, the preload bridge and the React renderer.
-// Run with: node build.mjs  (the npm build script type-checks first).
+//
+// esbuild 打包脚本：产出 Electron 主进程、preload 与 React 渲染包，并生成 dist/index.html。
+//
+// 先执行 tsc --noEmit 做类型检查，再运行本脚本。
+//
+// @author lishuiping
+// @license Apache-2.0
+// @see https://github.com/lishuiping/marmot
+
 import { build } from 'esbuild';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 

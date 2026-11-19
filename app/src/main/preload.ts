@@ -1,3 +1,12 @@
+/**
+ * 预加载层：用 contextBridge 把主进程能力以白名单形式暴露给渲染进程。
+ *
+ * contextIsolation 保持开启，渲染进程无法直接触碰 Node API。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
 import { contextBridge, ipcRenderer, webUtils } from 'electron';
 
 contextBridge.exposeInMainWorld('marmot', {

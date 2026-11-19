@@ -1,3 +1,10 @@
+/**
+ * 主进程与渲染进程共享的类型定义。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
 export interface FileNode {
   name: string;
   path: string;
@@ -17,7 +24,7 @@ export interface SaveRequest {
   filters?: { name: string; extensions: string[] }[];
 }
 
-export interface PaperAPI {
+export interface MarmotAPI {
   platform: string;
   version: string;
   openFile(): Promise<{ path: string; content: string } | null>;
@@ -41,6 +48,6 @@ export interface PaperAPI {
 
 declare global {
   interface Window {
-    marmot: PaperAPI;
+    marmot: MarmotAPI;
   }
 }

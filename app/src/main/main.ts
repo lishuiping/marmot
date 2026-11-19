@@ -1,3 +1,12 @@
+/**
+ * Electron 主进程：窗口与菜单、IPC 处理、本地文件读写、marmot:// 图片协议、截图模式。
+ *
+ * 渲染进程只能通过 preload 暴露的接口访问系统能力；本文件是唯一持有 Node 权限的地方。
+ *
+ * @author lishuiping
+ * @license Apache-2.0
+ * @see https://github.com/lishuiping/marmot
+ */
 import { app, BrowserWindow, Menu, dialog, ipcMain, protocol, net, shell, clipboard } from 'electron';
 import type { MenuItemConstructorOptions } from 'electron';
 import path from 'node:path';

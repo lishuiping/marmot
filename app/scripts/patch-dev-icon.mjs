@@ -1,13 +1,12 @@
-// Gives the development build a Marmot icon and name.
 //
-// In development the app runs from node_modules/electron/dist/Electron.app, so
-// macOS shows the Electron default icon in the Dock and the menu bar. The
-// Dock image comes from the bundle's CFBundleIconFile, not from the
-// BrowserWindow "icon" option — that one only affects the window.
+// 把开发模式下 Electron.app 的图标与名称替换为 Marmot，让 npm start 与正式版一致。
 //
-// This script copies our icon over the bundle's and renames the bundle fields,
-// so `npm start` looks like the packaged app. It is idempotent: it skips the
-// work when the icon is already in place.
+// Dock 图标取自 bundle 的 CFBundleIconFile，而非 BrowserWindow 的 icon 选项。
+//
+// @author lishuiping
+// @license Apache-2.0
+// @see https://github.com/lishuiping/marmot
+
 import { createRequire } from 'node:module';
 import { copyFileSync, existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
