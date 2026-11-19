@@ -17,12 +17,44 @@
 
 <p align="center">
   <a href="#为什么开源">为什么开源</a> ·
+  <a href="#界面一览">界面一览</a> ·
   <a href="#功能特性">功能特性</a> ·
   <a href="#快速开始">快速开始</a> ·
   <a href="#目录结构">目录结构</a> ·
   <a href="#技术栈">技术栈</a> ·
   <a href="#路线图">路线图</a>
 </p>
+
+---
+
+## 界面一览
+
+<div align="center">
+  <img src="docs/images/screen-main.jpg" alt="Marmot 主界面" width="88%" />
+  <br />
+  <sub>实时渲染的编辑区 · 左侧文件与大纲侧栏 · 底部字数统计</sub>
+</div>
+
+<br />
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/images/screen-dark.jpg" alt="深色主题" /></td>
+    <td width="50%"><img src="docs/images/screen-source.jpg" alt="源码模式" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>夜色主题</b> — 与明亮主题一样完整适配</sub></td>
+    <td align="center"><sub><b>源码模式</b> — 随时切回原始 Markdown，带行号</sub></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/screen-preferences.jpg" alt="偏好设置" /></td>
+    <td><img src="docs/images/screen-about.jpg" alt="关于 Marmot" /></td>
+  </tr>
+  <tr>
+    <td align="center"><sub><b>偏好设置</b> — 字体、字号、正文宽度、编辑选项</sub></td>
+    <td align="center"><sub><b>关于</b> — 完全免费、无需激活码、无需账户</sub></td>
+  </tr>
+</table>
 
 ---
 
@@ -93,6 +125,12 @@ Marmot 的出发点就是这件事：
 - 缩放（放大 / 缩小 / 恢复 100%）
 - 中文界面，深色模式完整适配
 
+<div align="center">
+  <img src="docs/images/screen-preferences.jpg" alt="偏好设置面板" width="62%" />
+  <br />
+  <sub>偏好设置面板 — 主题、字体、字号与正文宽度即时生效并记住你的选择</sub>
+</div>
+
 ### 🛡️ 隐私
 
 - 无账号系统、无遥测、无崩溃上报
@@ -109,7 +147,24 @@ Marmot 的出发点就是这件事：
 - **npm ≥ 9**
 - macOS / Windows / Linux 均可（开发环境为 macOS）
 
-### 安装与运行
+### 打包成安装包
+
+想生成可分发的安装包（macOS `.dmg`、Windows `.exe`、Linux `AppImage`）：
+
+```bash
+cd app
+npm run dist      # 生成安装包到 app/release/
+npm run pack      # 只生成免安装的 .app / 目录（更快，用于本地验证）
+```
+
+打包使用 [electron-builder](https://www.electron.build/)，应用图标取自 `app/assets/marmot.icns`。
+macOS 上未签名的应用首次打开需要右键 → 打开，或执行：
+
+```bash
+xattr -cr /Applications/Marmot.app
+```
+
+### 从源码运行
 
 ```bash
 # 1. 克隆仓库
@@ -136,9 +191,12 @@ npm start
 |---|---|
 | `npm install` | 安装依赖 |
 | `npm run build` | 类型检查（`tsc --noEmit`）+ 打包到 `dist/` |
-| `npm start` | 构建后启动应用 |
+| `npm start` | 构建后启动应用（开发模式，图标与正式版一致） |
 | `npm run electron` | 直接启动（不重新构建） |
 | `npm run shot` | 构建后启动并截取界面到 `app/shots/now.png` |
+| `npm run pack` | 打包成免安装的 `.app`（macOS）/ 目录 |
+| `npm run dist` | 打包成可分发的安装包 |
+| `node scripts/capture-screens.mjs` | 重新生成 README 用的界面截图 |
 
 > **提示**：`npm run build` 会先跑 `prebuild`，它只在依赖缺失时才执行 `npm install`，因此重复构建不会重复下载。
 
@@ -155,18 +213,25 @@ marmot/
 │   └── images/
 │       ├── banner.jpg          # README 横幅图
 │       ├── icon.png            # 应用图标
-│       └── screenshot-main.jpg # 界面截图
+│       ├── screen-main.jpg     # 主界面
+│       ├── screen-dark.jpg     # 夜色主题
+│       ├── screen-source.jpg   # 源码模式
+│       ├── screen-preferences.jpg # 偏好设置
+│       └── screen-about.jpg    # 关于面板
 └── app/
     ├── package.json            # 依赖与脚本定义
     ├── tsconfig.json           # TypeScript 配置
     ├── index.html              # 渲染进程 HTML 模板
     ├── build.mjs               # esbuild 打包脚本
+    ├── electron-builder.json   # 打包配置（图标、目标平台、Bundle ID）
     ├── assets/
     │   ├── marmot-icon-128.png # 界面内使用的图标
-    │   └── marmot.icns         # macOS 图标
+    │   └── marmot.icns         # macOS 图标（打包用）
     ├── scripts/
     │   ├── deps.mjs            # 首次构建自动安装依赖
-    │   └── run-electron.mjs    # 以干净环境启动 Electron
+    │   ├── run-electron.mjs    # 以干净环境启动 Electron
+    │   ├── patch-dev-icon.mjs  # 开发模式下替换 Electron 默认图标
+    │   └── capture-screens.mjs # 生成 README 界面截图
     ├── src/
     │   ├── main/
     │   │   ├── main.ts         # 主进程：窗口、菜单、IPC、文件读写
@@ -181,7 +246,8 @@ marmot/
     │       └── types.ts        # 主进程 / 渲染进程共享类型
     ├── MECHANICS.md            # 交互机制说明
     ├── mechanics.json          # 机制数据（结构化）
-    └── dist/                   # 构建产物（git 忽略）
+    ├── dist/                   # 构建产物（git 忽略）
+    └── release/                # 打包产物（git 忽略）
 ```
 
 ### 分层说明
@@ -229,7 +295,7 @@ marmot/
 
 ## 路线图
 
-- [ ] 打包分发（`electron-builder`，产出 dmg / exe / AppImage）
+- [x] 打包分发（`electron-builder`，产出 dmg / exe / AppImage）
 - [ ] 代码签名与公证
 - [ ] 可视化表格编辑
 - [ ] 自定义 CSS 主题
