@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "values": [
+    {
+      "name": "Indent with Tab (indentByTab)",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b)"
+    },
+    {
+      "name": "Indent size",
+      "group": "editor defaults",
+      "value": 2,
+      "unit": "spaces",
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), indentSize"
+    },
+    {
+      "name": "Code indent size",
+      "group": "editor defaults",
+      "value": 4,
+      "unit": "spaces",
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), codeIndentSize"
+    },
+    {
+      "name": "Inline math",
+      "group": "editor defaults",
+      "value": true,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), enableInlineMath"
+    },
+    {
+      "name": "Mermaid diagrams",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), enableDiagram"
+    },
+    {
+      "name": "GitHub-style alerts",
+      "group": "editor defaults",
+      "value": true,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), enableAlert"
+    },
+    {
+      "name": "Copy Markdown by default",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), copyMarkdownByDefault"
+    },
+    {
+      "name": "Line numbers in fenced code",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), showLineNumbersForFence"
+    },
+    {
+      "name": "Relative image paths",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), useRelativePathForImg"
+    },
+    {
+      "name": "Autosave enabled by default",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), enableAutoSave"
+    },
+    {
+      "name": "Heading style",
+      "group": "editor defaults",
+      "value": 0,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), headingStyle"
+    },
+    {
+      "name": "Unordered list style",
+      "group": "editor defaults",
+      "value": 0,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), ulStyle"
+    },
+    {
+      "name": "Ordered list style",
+      "group": "editor defaults",
+      "value": 0,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), olStyle"
+    },
+    {
+      "name": "Strict Markdown",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), strictMarkdown"
+    },
+    {
+      "name": "Prefer CRLF",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), preferCRLF"
+    },
+    {
+      "name": "Prefer final newline",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), preferFinalNewline"
+    },
+    {
+      "name": "No line wrapping",
+      "group": "editor defaults",
+      "value": false,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), noLineWrapping"
+    },
+    {
+      "name": "Default word-count metric (wordCountDelimiter)",
+      "group": "editor defaults",
+      "value": 0,
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b); 0 = Words, 1 = Characters, 2 = Lines, 3 = Minutes"
+    },
+    {
+      "name": "Reading speed (wordsPerMinute)",
+      "group": "word count",
+      "value": 382,
+      "unit": "words/min",
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), wordsPerMinute"
+    },
+    {
+      "name": "Default file extension",
+      "group": "editor defaults",
+      "value": "md",
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), defaultExtension"
+    },
+    {
+      "name": "Preset spellcheck",
+      "group": "editor defaults",
+      "value": "auto",
+      "source": "TypeMark/appsrc/main.js File.DEFAULT_OPTIONS (module 3b), presetSpellCheck"
+    },
+    {
+      "name": "Word count formula",
+      "group": "word count",
+      "value": "cjk characters (U+3040-U+ABFF, U+D7A4-U+FAFF) each count 1; remaining text is split on whitespace and POSIX punctuation with apostrophe contractions kept together; result = cjk + parts - 2",
+      "source": "TypeMark/appsrc/main.js WordCount.getWordCount local count() (module 40; class at bundle line 9809)"
+    },
+    {
+      "name": "Reading time formula",
+      "group": "word count",
+      "value": "round(words / 382); 0 is displayed as <= 1",
+      "source": "TypeMark/appsrc/main.js WordCount / titlebar readTimeLabel"
+    },
+    {
+      "name": "Character count metric",
+      "group": "word count",
+      "value": "markdown.length in UTF-16 code units",
+      "source": "TypeMark/appsrc/main.js WordCount character metric"
+    },
+    {
+      "name": "Line count metric",
+      "group": "word count",
+      "value": "newline count + 1",
+      "source": "TypeMark/appsrc/main.js WordCount line metric"
+    },
+    {
+      "name": "Selection count debounce",
+      "group": "word count",
+      "value": 50,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js WordCount selection timer"
+    },
+    {
+      "name": "Titlebar counter rule",
+      "group": "word count",
+      "value": "show sel / all only while 0 < sel < all; otherwise show all",
+      "source": "native -[TitlebarRightAccessoryViewController updateWordCount:all:delimiter:] 0x10001755c"
+    },
+    {
+      "name": "Autosave idle delay",
+      "group": "autosave",
+      "value": 1000,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js File.scheduleBackupWindow (requestSmartSchedule(..., 1e3, 1e4))"
+    },
+    {
+      "name": "Autosave hard cap",
+      "group": "autosave",
+      "value": 10000,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js File.scheduleBackupWindow (requestSmartSchedule(..., 1e3, 1e4))"
+    },
+    {
+      "name": "Autosave checkpoint interval",
+      "group": "autosave",
+      "value": 600000,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js File.startAutoSaveAndBackupService"
+    },
+    {
+      "name": "Draft cleanup interval",
+      "group": "autosave",
+      "value": 144000000,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js File.startAutoSaveAndBackupService"
+    },
+    {
+      "name": "Snapshot write retry limit",
+      "group": "autosave",
+      "value": 30,
+      "unit": "attempts",
+      "source": "native -[Document backupDocumentSnapSync] 0x100043ee8 (0x1e)"
+    },
+    {
+      "name": "Autosave conditions",
+      "group": "autosave",
+      "value": "only when the document has a path, has unsaved changes, the window is active and enableAutoSave is on",
+      "source": "TypeMark/appsrc/main.js File.backupWindow"
+    },
+    {
+      "name": "Typewriter mode apply delay",
+      "group": "typewriter",
+      "value": 100,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js File.editor.setTypeWriterMode (bundle lines 57374-57386)"
+    },
+    {
+      "name": "Typewriter centre formula",
+      "group": "typewriter",
+      "value": "e = (viewport height - line height) / 2",
+      "source": "TypeMark/appsrc/main.js File.editor.setTypeWriterMode (bundle lines 57374-57386)"
+    },
+    {
+      "name": "Typewriter padding-top formula",
+      "group": "typewriter",
+      "value": "padding-top = e - line height",
+      "source": "TypeMark/appsrc/main.js File.editor.setTypeWriterMode (bundle lines 57374-57386)"
+    },
+    {
+      "name": "Typewriter space-after formula",
+      "group": "typewriter",
+      "value": "space-after = e + line height",
+      "source": "TypeMark/appsrc/main.js File.editor.setTypeWriterMode (bundle lines 57374-57386)"
+    },
+    {
+      "name": "Focus mode reapply delay",
+      "group": "typewriter",
+      "value": 100,
+      "unit": "ms",
+      "source": "TypeMark/appsrc/main.js focus mode update"
+    },
+    {
+      "name": "Root font size",
+      "group": "typography (github theme)",
+      "value": 16,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css"
+    },
+    {
+      "name": "Body line height",
+      "group": "typography (github theme)",
+      "value": 1.6,
+      "source": "TypeMark/style/themes/github.css"
+    },
+    {
+      "name": "Body text colour",
+      "group": "typography (github theme)",
+      "value": "rgb(51,51,51)",
+      "source": "TypeMark/style/themes/github.css"
+    },
+    {
+      "name": "Write column width",
+      "group": "typography (github theme)",
+      "value": 860,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css #write max-width"
+    },
+    {
+      "name": "Write column width at 1400px viewport",
+      "group": "typography (github theme)",
+      "value": 1024,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css #write max-width"
+    },
+    {
+      "name": "Write column width at 1800px viewport",
+      "group": "typography (github theme)",
+      "value": 1200,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css #write max-width"
+    },
+    {
+      "name": "Write horizontal padding",
+      "group": "typography (github theme)",
+      "value": 30,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css #write padding"
+    },
+    {
+      "name": "Write bottom padding",
+      "group": "typography (github theme)",
+      "value": 100,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css #write padding-bottom"
+    },
+    {
+      "name": "H1 size",
+      "group": "typography (github theme)",
+      "value": 2.25,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css h1"
+    },
+    {
+      "name": "H2 size",
+      "group": "typography (github theme)",
+      "value": 1.75,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css h2"
+    },
+    {
+      "name": "H3 size",
+      "group": "typography (github theme)",
+      "value": 1.5,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css h3"
+    },
+    {
+      "name": "H4 size",
+      "group": "typography (github theme)",
+      "value": 1.25,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css h4"
+    },
+    {
+      "name": "Paragraph and list block margin",
+      "group": "typography (github theme)",
+      "value": 0.8,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css"
+    },
+    {
+      "name": "List left padding",
+      "group": "typography (github theme)",
+      "value": 30,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css"
+    },
+    {
+      "name": "Blockquote border width",
+      "group": "typography (github theme)",
+      "value": 4,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css blockquote"
+    },
+    {
+      "name": "Table cell padding",
+      "group": "typography (github theme)",
+      "value": "6px 13px",
+      "source": "TypeMark/style/themes/github.css table cells"
+    },
+    {
+      "name": "Inline code and fence font size",
+      "group": "typography (github theme)",
+      "value": 0.9,
+      "unit": "em",
+      "source": "TypeMark/style/themes/github.css code"
+    },
+    {
+      "name": "Horizontal rule height",
+      "group": "typography (github theme)",
+      "value": 2,
+      "unit": "px",
+      "source": "TypeMark/style/themes/github.css hr"
+    },
+    {
+      "name": "Night theme background",
+      "group": "typography (night theme)",
+      "value": "#363B40",
+      "source": "TypeMark/style/themes/night.css"
+    },
+    {
+      "name": "Night theme text colour",
+      "group": "typography (night theme)",
+      "value": "#b8bfc6",
+      "source": "TypeMark/style/themes/night.css"
+    },
+    {
+      "name": "Night theme sidebar colour",
+      "group": "typography (night theme)",
+      "value": "#2E3033",
+      "source": "TypeMark/style/themes/night.css"
+    },
+    {
+      "name": "Night theme selection colour",
+      "group": "typography (night theme)",
+      "value": "#4a89dc",
+      "source": "TypeMark/style/themes/night.css"
+    },
+    {
+      "name": "Night theme write column width",
+      "group": "typography (night theme)",
+      "value": 914,
+      "unit": "px",
+      "source": "TypeMark/style/themes/night.css #write max-width"
+    },
+    {
+      "name": "Night theme line height",
+      "group": "typography (night theme)",
+      "value": "1.625rem",
+      "source": "TypeMark/style/themes/night.css"
+    },
+    {
+      "name": "Base font size before theme override",
+      "group": "typography (base)",
+      "value": 14,
+      "unit": "px",
+      "source": "TypeMark/style/base.css"
+    },
+    {
+      "name": "Base body line height",
+      "group": "typography (base)",
+      "value": 1.42857143,
+      "source": "TypeMark/style/base.css"
+    },
+    {
+      "name": "Base write top padding",
+      "group": "typography (base)",
+      "value": 36,
+      "unit": "px",
+      "source": "TypeMark/style/base.css #write"
+    },
+    {
+      "name": "Base selection colour",
+      "group": "typography (base)",
+      "value": "#B5D6FC",
+      "source": "TypeMark/style/base.css"
+    },
+    {
+      "name": "Titlebar height",
+      "group": "typography (base)",
+      "value": "20px (28px on macOS 11+)",
+      "source": "TypeMark/style/base.css title bar"
+    }
+  ]
+}

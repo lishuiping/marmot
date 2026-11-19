@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+app/dist/
+app/.npm-cache/
+app/.electron-cache/
+
+# Local artifacts
+app/shots/
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS / tooling
+Thumbs.db
+coverage/
+.eslintcache
+
+# Craft Anything working data (not part of the open-source project)
+investigation.cany/
+checks/
+capture/
+inbox/
+craft.json
+feed.json
+build-activity.log
+.craft-anything.tmp-*
+
+# Craft Anything usage record
+usage.json

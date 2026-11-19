@@ -1,0 +1,52 @@
+{
+  "name": "marmot",
+  "productName": "Marmot",
+  "version": "1.0.0",
+  "description": "A free, original live-preview Markdown editor in the spirit of Typora. No activation, no account.",
+  "main": "dist/main.js",
+  "author": {
+    "name": "lishuiping",
+    "url": "https://github.com/lishuiping"
+  },
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "prebuild": "node scripts/deps.mjs",
+    "build": "tsc --noEmit && node build.mjs",
+    "start": "npm run build && node scripts/run-electron.mjs",
+    "electron": "node scripts/run-electron.mjs",
+    "shot": "npm run build && node scripts/run-electron.mjs --screenshot shots/now.png"
+  },
+  "devDependencies": {
+    "@types/katex": "0.16.7",
+    "@types/node": "22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "electron": "35.5.1",
+    "esbuild": "0.24.0",
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "katex": "0.16.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lishuiping/marmot.git"
+  },
+  "homepage": "https://github.com/lishuiping/marmot",
+  "bugs": {
+    "url": "https://github.com/lishuiping/marmot/issues"
+  },
+  "keywords": [
+    "markdown",
+    "editor",
+    "electron",
+    "react",
+    "typeset",
+    "offline",
+    "open-source",
+    "free"
+  ]
+}
