@@ -46,3 +46,10 @@ usage.json
 # One-shot publish helper (local use only)
 push-to-github.sh
 app/release/
+
+# Build output directories
+app/release*/
+app/.cache/
+
+# Local helper scripts and scratch output
+*.log
